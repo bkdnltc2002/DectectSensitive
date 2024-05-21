@@ -1,0 +1,17 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+int main (){
+    float num1 , num2 , num3;
+    printf ("Enter three float numbers: ");
+    // Prompt user to enter numbers
+    scanf ("%f %f %f", &num1 , &num2 , &num3);
+    printf ("A number is the sum of the others: ");
+    // Condition 
+    if(num1 == num2 + num3 || num2 == num1 + num3 || num3 == num1 + num2) {
+        printf ("YES");
+    } else {
+        printf ("NO");
+    }
+    return 0;   
+}

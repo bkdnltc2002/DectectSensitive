@@ -1,0 +1,13 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+
+int main(){
+    int num;
+    while(num <= 10){
+    printf ("enter a number (1-10): ");
+    scanf ("%d", &num);
+    }
+
+    return 0;
+}

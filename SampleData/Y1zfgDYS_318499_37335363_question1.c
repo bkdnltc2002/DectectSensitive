@@ -1,0 +1,29 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: dfz6XyZ18AtO
+    ID: AfXUxnRPt3A9
+    Compiler used: 2yohDZwENKA4
+    Created  date: JdtgbsuWhNNg
+    References: shXjlAQ6oOtS
+*/
+
+
+#include <stdio.h>
+
+int main(void) {
+    printf("Please enter three float numbers: \n"); //prompt user to input 3 float numbers
+    float num1, num2, num3;  //declare 3 float numbers for later use
+    scanf("%f %f %f", &num1, &num2, &num3 );  //user input
+
+    //check if one number is  the sum of other 2 numbers
+    if ((num1 == num2 + num3) || (num2 == num1 + num3) || (num3 == num1 + num2)) {
+        printf("A number is the sum of others: YES \n");
+    } else {
+        printf("A number is the sum of others: NO \n");
+    }
+
+    return 0;
+}

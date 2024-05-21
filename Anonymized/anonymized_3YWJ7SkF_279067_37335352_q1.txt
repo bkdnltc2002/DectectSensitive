@@ -1,0 +1,23 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+
+int main(void){
+
+    //Input three float number
+    float a, b, c;
+    printf("Enter three float number: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    //Print out the result
+    printf("A number is the sum of the others: ");
+
+    if ((a + b == c) || (a + c == b) || (c + b == a)){
+        printf("YES");
+    } else {
+        printf("NO");
+    }
+
+    return 0;
+    
+}

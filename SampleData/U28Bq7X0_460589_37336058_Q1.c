@@ -1,0 +1,43 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: 12J4K2wdHK3C
+    ID: k756qXfkk6wT
+    Compiler used: zN5XyhidVF9f
+    Created  date: JdtgbsuWhNNg
+    References: shXjlAQ6oOtS
+*/
+#include <stdio.h>
+int main(){
+    float a;
+    float b; 
+    float c;
+    printf("Enter three float numbers: ");
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    if ( a + b == c )
+    {
+        printf("YES");
+    } else if (a + c == b)
+        {
+            printf("YES");
+        }
+        else if (c + b == a)
+        {
+            printf("YES");
+        }
+        else
+        {
+            printf("NO");
+        }
+        return 0;
+        
+    }
+    
+
+
+
+    

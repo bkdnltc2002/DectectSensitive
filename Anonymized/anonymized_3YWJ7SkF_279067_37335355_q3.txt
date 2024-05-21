@@ -1,0 +1,45 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+
+int main(void){
+    
+    int num;
+    printf("Enter an integer between 0 and 10: ");
+    scanf("%d", &num);
+    
+    //Begin to print
+    for (int i = 1; i <= num; i++){
+
+        //Print block
+        for (int block = num - i; block >= 1; block--){
+            printf("   ");
+        }
+
+        //Print half pyramid
+        for (int col = num - i + 1; col <= num; col++) {
+            printf("%3d", col);
+        } 
+
+        //Print half right pyramid 
+        for (int block = i - 1; block >= 2 ; block--){
+            if (block <= num - 2){
+                printf("   "); 
+            } else {
+                for (int i = num -1; i >= 1; i--){
+                    printf("%3d", i);
+                }
+            }
+            
+        }
+
+        int numinhalf =  num - i + 1;
+        if (numinhalf < num && numinhalf > 1){
+            printf("%3d", numinhalf);
+        }
+
+        printf("\n");
+    }
+    
+    return 0;
+}

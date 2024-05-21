@@ -1,0 +1,25 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+
+#include <stdio.h>
+
+int main(){
+    float num1, num2, num3;
+    printf("Enter three float numbers: ");
+    scanf("%f %f %f", &num1, &num2, &num3);
+
+    if (num1 + num2 == num3) {
+        printf("A number is the sum of the others: YES\n");
+    }   
+        else if (num1 + num3 == num2){
+            printf("A number is the sum of the others: YES\n");
+    }
+        else if ((num2 + num3 == num1)){
+           printf("A number is the sum of the others: YES\n");
+    }    
+        else {
+            printf("A number is the sum of the others : NO\n");
+        }
+    
+    return 0;
+}

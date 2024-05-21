@@ -1,0 +1,29 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: dBXh45lLFunr
+    ID: FYPUkKYkIqmc
+    Compiler used: 20zmVn0LRwmo
+    Created  date: JdtgbsuWhNNg
+    References: g6uSn07TTrtx
+*/
+
+#include <stdio.h>
+
+int main(void){
+    // Initialize vairable for 3 float
+    float a,b,c;
+    printf("Enter 3 float numbers: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    // Check if any one float is the sum of the other 3 float
+    if (a == b +c || b == c+a || c == a + b){
+        printf("A number is the sum of others: YES \n");
+    }
+    else{
+        printf("A number is the sum of others: NO \n");
+    }
+    return 0;
+}

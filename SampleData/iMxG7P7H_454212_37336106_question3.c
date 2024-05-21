@@ -1,0 +1,47 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: HNtmrTm8yeLN
+    ID: osNWVh3Y4uLW
+    Compiler used: tk4qEaIA06Uw
+    Created  date: JdtgbsuWhNNg
+    References: g6uSn07TTrtx
+*/
+
+#include <stdio.h>
+int main()
+{
+    //Ask user to input number
+    int num;
+    printf("Enter a number (1 - 10): ");
+    scanf("%i", &num);
+
+    //Check number if it is valid
+    while(num<1 || num>10){
+        printf("\nNotice: a number between 1 and 10\n");
+        printf("Enter a number (1 - 10): ");
+        scanf("%i", &num);
+    }
+
+    //Command for each row
+    for (int row=1; row<=num; row++){
+        for (int space=1; space <= num-row; space++){//Print space for each row
+            printf("   ");
+        }
+
+        for (int ascending_num=num-row+1; ascending_num<=num; ascending_num++){//Print the ascending numbers into each line
+            printf("%2i ", ascending_num);
+        }
+
+        if (row!=1){
+            for (int descending_num=9; descending_num>num-row+1; descending_num--){//Print out the missing space and then print the last element of each line
+                printf("   ");
+            }
+            printf("%i", num-row+1);
+        }
+        printf("\n");//Go to another line for the next loop
+    }
+    return 0;
+}

@@ -1,0 +1,20 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include<stdio.h>
+int main(){
+float num_1;
+float num_2;
+float num_3;
+printf("Enter three float numbers: \n");
+scanf("%f %f %f",&num_1,&num_2,&num_3);
+printf("A number is the sum of the others:");
+if ( num_3 == num_1 + num_2){
+    printf("Yes");
+} else if (num_2 == num_1 + num_3){
+    printf("Yes");}
+    else if(num_1 == num_2 + num_3){
+        printf("Yes");
+    } else printf("No");
+
+return 0;
+}

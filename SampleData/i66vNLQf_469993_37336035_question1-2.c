@@ -1,0 +1,34 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: 8wwtSUrYbIav
+    ID: 8ECuls0gEjRG
+    Compiler used: J1EzQMFiIkL2
+    Created  date: JdtgbsuWhNNg
+    References: shXjlAQ6oOtS
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+    int main(){
+       float num1, num2, num3;
+       int sum = 0;
+
+        printf ("Enter three float numbers: ");
+        scanf ("%f %f %f", &num1, &num2, &num3 );
+// check for sum of the numbers
+    if (num1 == num2 + num3){
+    printf ("YES");}
+    if (num2 == num1 + num3){
+    printf ("YES");}
+    if (num3 == num2 + num1){
+    printf ("YES");}
+else {
+    printf ("NO");
+}
+
+return 0;
+    }

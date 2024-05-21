@@ -1,0 +1,29 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+int main () {
+    double numb1, numb2, numb3;
+
+    printf("Enter three float numbers: "); // input three numbers
+    scanf("%lf %lf %lf", &numb1, &numb2, &numb3);
+
+    double sum = numb1;
+    // check if the number 1,2 or 3 is the sum of the other 3
+   if (sum = numb2 + numb3) {
+    sum =numb1;
+    printf ("A number is the sum of the other numbers: YES \n");
+
+   } else if (sum = numb1 + numb3) {
+    sum = numb2;
+    printf ("A number is the sum of the other numbers: YES \n");
+   } else if (sum = numb1 + numb2) {
+    sum = numb3;
+    printf ("A number is the sum of the other numbers: YES \n");
+   } else {
+    printf (" A number is the sum of the other numbers: NO \n");
+   }
+   
+
+    
+   return (0);
+}

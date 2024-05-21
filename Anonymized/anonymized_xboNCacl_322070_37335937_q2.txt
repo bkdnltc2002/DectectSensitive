@@ -1,0 +1,28 @@
+/*/* [SENSITIVE INFORMATION REMOVED] */*/
+
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+
+    //Input an integer
+    while (1) {
+        printf("Enter an even integer: ");
+        scanf("%d", &num);
+
+        //Check an even num
+        if (num % 2 != 0) {
+            printf("It is not an even integer.\n");
+            break;
+        }
+
+        for (int i = 0; i <= num; i += 2) {
+            sum += i;
+        }
+
+        printf("Sum of all even values from 0 to %d is: %d\n", num, sum);
+        sum = 0; // Reset sum for the next iteration
+    }
+
+    return 0;
+}

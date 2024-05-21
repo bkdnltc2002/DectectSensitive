@@ -1,0 +1,34 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: K5T2DUrHOc7q
+    ID: le8UTSx6YHOn
+    Compiler used: J1EzQMFiIkL2
+    Created  date: oG6mj2M38YUJ
+    References: shXjlAQ6oOtS
+*/
+#include<stdio.h>
+int main(){
+int input;
+int sum=0;
+// making loops in case the user enter the wrong input
+while( 1 ) {
+    printf("Enter an integer: ");
+    scanf("%d",&input);
+    // condition for input
+    if (input %2 != 0){
+        printf("It is not an even integer.\n");
+        break;
+    } 
+    
+    for(int i=0;i<=input;i+=2){
+            sum += i;// sum of even numbers
+        }
+            printf("Sum of all even values from 0 to %d is: %d ",input,sum);
+            sum=0;
+    }
+    return 0;
+
+}
