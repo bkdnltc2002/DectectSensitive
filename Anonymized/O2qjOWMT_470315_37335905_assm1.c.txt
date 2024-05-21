@@ -1,0 +1,28 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]/
+
+#include <stdio.h>
+
+int main(void){
+    float num1, num2, num3;
+    printf("enter 3 float numbers: ");
+    scanf("%f %f %f", &num1, &num2, &num3);
+
+    if (num1 + num2 == num3){
+        printf("yes");        
+    } else if (num1 + num3 == num2) {
+        printf ("yes");
+    } else if (num2 + num3 == num1){
+        printf("yes");
+    } else {
+        printf ("no");
+    }
+return 0;
+}

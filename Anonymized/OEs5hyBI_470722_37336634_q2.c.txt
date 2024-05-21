@@ -1,0 +1,33 @@
+/*
+  
+  Course: [REMOVED]
+  [REMOVED]: [REMOVED]
+  Lab [REMOVED]: [REMOVED]
+  Author: [REMOVED]
+  ID: [REMOVED]
+  [REMOVED] used: [REMOVED]
+  Created  date: [REMOVED]
+  [REMOVED]: None
+*/
+
+#include <stdio.h>
+
+int main () {
+
+    int num1, sum = 0;
+    printf("Enter an even integer: ");
+    scanf("%d", &num1);
+
+    /* [REMOVED] even/odd */
+    if (num1 % 2 == 0) {
+        int i;
+        for (i = 0; i * 2 <= num1; i++) {
+            sum = sum + (i * 2) ; //[REMOVED]
+        }
+        printf("Sum of all even values from 0 to %d is: %d", num1, sum);
+    } else {
+        printf("It is not an interger.");
+    }
+
+    return 0;
+}

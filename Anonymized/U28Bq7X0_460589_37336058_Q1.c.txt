@@ -1,0 +1,43 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+int main(){
+    float a;
+    float b; 
+    float c;
+    printf("Enter three float numbers: ");
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    if ( a + b == c )
+    {
+        printf("YES");
+    } else if (a + c == b)
+        {
+            printf("YES");
+        }
+        else if (c + b == a)
+        {
+            printf("YES");
+        }
+        else
+        {
+            printf("NO");
+        }
+        return 0;
+        
+    }
+    
+
+
+
+    

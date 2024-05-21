@@ -1,0 +1,48 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter a number (1-10): ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 10) {
+        printf("Invalid input. Please enter a number between 1 and 10.\n");
+        return 1;
+    }
+
+    for (int i = 1; i <= n; i++) {
+        // Print spaces before the numbers
+        for (int j = 1; j <= n - i; j++) {
+            printf("  ");
+        }
+
+        // Print the first [REMOVED] [REMOVED] of numbers
+        for (int j = i; j <= n; j++) {
+            printf("%d ", j);
+        }
+
+        // Print the second [REMOVED] [REMOVED] of numbers (except for the last row)
+        if (i < n) {
+            for (int j = n - 1; j >= i; j--) {
+                printf("%d ", j);
+            }
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}

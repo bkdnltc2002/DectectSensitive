@@ -1,0 +1,72 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: wa4z37WXd2No
+    ID: 7tYqYIyR1fuK
+    Compiler used: zN5XyhidVF9f
+    Created  date: JdtgbsuWhNNg
+    References: JdtgbsuWhNNg
+*/
+
+
+/*
+Prompt the user to enter three float numbers, check if among them, a number is the sum of
+other two numbers or not, and print out a YES/NO message as below:
+
+Sample Run:
+Enter three float numbers: 13.5 40.7 27.2
+A number is the sum of the others: YES
+*/
+
+#include <stdio.h>
+
+int main() {
+
+    // Create three float numbers to store the user input
+    float a, b, c;
+
+    // Prompt user for 3 float numbers
+    printf("Enter three float numbers: ");
+    // Get the three float numbers from the user
+    scanf("%f%f%f", &a, &b, &c);
+
+    // use References g6uSn07TTrtx as a boolean
+    int equalSum = 0;
+
+    /*
+    a + b = c
+    b + a = c
+    b + c = a
+    a + c = b
+    13.5 27.2 40.7
+    40.7 13.5 27.2
+    27.2 40.7 13.5
+    */
+
+    // check if the first two float equals the third
+    if (a + b == c) {
+        equalSum = 1;
+    } 
+    // check if the first and the last equal the second
+    else if (a + c == b) {
+        equalSum = 1;
+    }
+    // check if the second and the third equal the first
+    else if (b + c == a) {
+        equalSum = 1;
+    }
+    // if the sum of two is not equal to the other print NO
+    else {
+        printf("A number is the sum of the others: NO\n");
+    }
+    // if the sum of two is equal to the other print YES
+    if (equalSum == 1) {
+        printf("A number is the sum of the others: YES\n");
+    }
+
+    //printf("%.2f %.2f %.2f\n", a, b, c);
+
+    return 0;
+}

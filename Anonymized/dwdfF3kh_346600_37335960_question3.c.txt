@@ -1,0 +1,43 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+    */
+
+    #include <stdio.h>
+
+    int main(){
+        int num;
+        do {
+    printf("please enter an integer between 1 to 10: ");
+    scanf("%d" , &num);
+        }
+while ( num <=1 || num >10);
+
+
+for (int row = 1; row <= num; row++){
+    // block of space
+    for(int space = 1; space <= num - row; space ++){
+        printf("    ");
+    }
+// first half of the pyramid
+
+    for(int col= num + 1 - row; col <= num; col ++){
+        printf("%4d", col);
+    }
+
+    // second half of the pyramid
+     for (int col = num -1; col > num -row ; col --){
+        printf("%4d", col);
+    } 
+    printf("\n");
+}
+
+        return 0;
+    }

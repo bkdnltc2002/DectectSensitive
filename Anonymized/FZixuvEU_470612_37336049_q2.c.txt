@@ -1,0 +1,29 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+#include <math.h>
+int main() {
+    //[REMOVED] two [REMOVED]
+    int num, sum;
+    printf("Enter an even integer: "); //let user input and save the value to num
+    scanf("%d", &num);
+
+    //making sure 
+    if(num % 2 == 0) {
+        for (int i = num; i <= num; i++) {
+        sum = i + num;
+        }
+        printf("The sum is: %d \n", sum);
+    } else
+    printf("Not an odd number \n");
+    return 0;
+}

@@ -1,0 +1,32 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    [REMOVED]: [REMOVED]
+*/
+#include <stdio.h>
+
+int main() {
+int sum_even = 0;
+int num;
+
+while (1) {
+printf("Enter an even integer: ");
+scanf("%d", &num);
+
+if (num % 2 != 0) {
+printf("It is not an even integer.\n");
+break;
+} else {
+sum_even += num;
+printf("Sum of all even value from 0 to %d is %d\n", num, sum_even);
+}
+}
+
+return 0;
+}

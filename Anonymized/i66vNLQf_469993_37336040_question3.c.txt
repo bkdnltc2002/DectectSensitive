@@ -1,0 +1,26 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+
+#include <stdio.h>
+
+//i: [REMOVED]
+//j: [REMOVED]
+int main() {
+    int num;
+    printf ("Input a number from 1-10: ");
+    scanf ("%d", &num);
+
+for (int i = 1; i <= num, i++){
+    
+}
+
+}

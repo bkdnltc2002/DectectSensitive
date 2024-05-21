@@ -1,0 +1,46 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: L2wFvbGzSI3F
+    ID: m8YQSAdGSZGo
+    Compiler used: xlkVLeOovPQM
+    Created  date: JdtgbsuWhNNg
+    References: JdtgbsuWhNNg
+*/
+#include <stdio.h>
+#include <math.h>
+int main() {
+    float a, b, c;
+    float ab = a + b, ac = a + c, bc = b + c;
+    //Let user input three numbers and save it into a References
+    while(1) {      
+    printf("Enter three numbers: ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    //Check if no numbers sum is equal to other
+    if(ab < c || ab > c || ac < b || ac > b || bc < a || bc > a) {
+        printf("NO \n");
+    } 
+     else {
+    //If there two number sum equal to the other number
+    printf("A number is the sum of the others: ");
+    if(ab = c) {
+    printf("YES \n"); 
+    }
+    else if(ac = b) {
+        printf("YES \n");
+    }
+    else if(bc = a) {
+        printf("YES \n");
+    }
+    else if(ab = c) {
+        printf("YES \n");
+    }
+     }
+    
+    return 0;
+
+    }
+}

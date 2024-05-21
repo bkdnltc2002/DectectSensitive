@@ -1,0 +1,55 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED] 
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+
+#include <stdio.h>
+
+int main ()
+{
+    int row;
+
+    //Use loop for input the number (1-10)
+    do 
+    {
+        printf ("Enter a number (1 - 10): ");
+        scanf ("%d", &row);    
+    } while ((row < 1) || (row > 10));
+
+    //Print out the pyramid
+    for (int i = row; i > 0; i--)
+    {
+        /* for each row */
+        int j;
+
+        //Print out the numbers and blanks on the left side in [REMOVED] order
+        for (j = 1; j <= row; j++)
+        {
+            if (j >= i) printf ("%3d", j);
+            else printf ("   ");
+        }
+
+        //Print the right-hand side, from the second row
+        if (i != row) for (j = (row - 1); j >= i; j--)
+        {
+            /* Print right-hand side */
+            if (i != 1) //Print blanks and final value of that row
+            {
+                if (j == i) printf ("%3d", j);
+                else printf ("   ");
+            }
+            else printf ("%3d", j); //Print out the numbers in [REMOVED] order
+        }
+
+        printf ("\n");
+    }
+
+    return 0;
+}

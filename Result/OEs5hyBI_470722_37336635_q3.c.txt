@@ -1,0 +1,118 @@
+/*
+  
+  Course: yGxhAScpBbla
+  Semester: DEsaEdBEdlwR
+  Lab Assessment: yUcn4p1p7e9n
+  Author: 0MlbRxLrGACx
+  ID: 9F2ndpvbjvzm
+  Compiler used: zN5XyhidVF9f
+  Created  date: EwHuCz0ykI5S
+  Acknowledgement: None
+*/
+
+/* reserve for 10 different permuatation? */
+
+#include <stdio.h>
+
+int main () {
+    int i, row, count = 0, col = 0;
+
+    printf("Enter a number (1 - 10): ");
+    scanf("%d", &row);
+    if (row >= 1 && row <=10) { //inefficient so user don't enter too high of a number
+        switch (row) { //Switch case for each pyramid permutation. * are in use instead of blank
+            case 1:
+            printf("");
+            break;
+
+            case 2:
+            printf(" *  2  * \n");
+            break;
+
+            case 3:
+            printf(" *  *  3  *  * \n");
+            printf(" *  2  3  2  * \n");
+            break;
+
+            case 4:
+            printf(" *  *  *  4  *  *  * \n");
+            printf(" *  *  3  4  3  *  * \n");
+            printf(" *  2  3  4  *  2  * \n");
+            break;
+
+            case 5:
+            printf(" *  *  *  *  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  4  *  *  * \n");
+            printf(" *  *  3  4  5  *  3  *  * \n");
+            printf(" *  2  3  4  5  *  *  2  * \n");
+            break;
+
+            case 6:
+            printf(" *  *  *  *  *  6  *  *  *  *  * \n");
+            printf(" *  *  *  *  5  6  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  6  *  4  *  *  * \n");
+            printf(" *  *  3  4  5  6  *  *  3  *  * \n");
+            printf(" *  2  3  4  5  6  *  *  *  2  * \n");
+            break;
+
+            case 7:
+            printf(" *  *  *  *  *  *  7  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  6  7  6  *  *  *  *  * \n");
+            printf(" *  *  *  *  5  6  7  *  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  6  7  *  *  4  *  *  * \n");
+            printf(" *  *  3  4  5  6  7  *  *  *  3  *  * \n");
+            printf(" *  2  3  4  5  6  7  *  *  *  *  2  * \n");
+            break;
+
+            case 8:
+            printf(" *  *  *  *  *  *  *  8  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  7  8  7  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  6  7  8  *  6  *  *  *  *  * \n");
+            printf(" *  *  *  *  5  6  7  8  *  *  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  6  7  8  *  *  *  4  *  *  * \n");
+            printf(" *  *  3  4  5  6  7  8  *  *  *  *  3  *  * \n");
+            printf(" *  2  3  4  5  6  7  8  *  *  *  *  *  2  * \n");
+            break;
+
+            case 9:
+            printf(" *  *  *  *  *  *  *  *  9  *  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  *  8  9  8  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  7  8  9  *  7  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  6  7  8  9  *  *  6  *  *  *  *  * \n");
+            printf(" *  *  *  *  5  6  7  8  9  *  *  *  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  6  7  8  9  *  *  *  *  4  *  *  * \n");
+            printf(" *  *  3  4  5  6  7  8  9  *  *  *  *  *  3  *  * \n");
+            printf(" *  2  3  4  5  6  7  8  9  *  *  *  *  *  *  2  * \n");
+            break;
+
+            case 10:
+            printf(" *  *  *  *  *  *  *  *  * 10  *  *  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  *  *  9 10  9  *  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  *  8  9 10  *  8  *  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  *  7  8  9 10  *  *  7  *  *  *  *  *  * \n");
+            printf(" *  *  *  *  *  6  7  8  9 10  *  *  *  6  *  *  *  *  * \n");
+            printf(" *  *  *  *  5  6  7  8  9 10  *  *  *  *  5  *  *  *  * \n");
+            printf(" *  *  *  4  5  6  7  8  9 10  *  *  *  *  *  4  *  *  * \n");
+            printf(" *  *  3  4  5  6  7  8  9 10  *  *  *  *  *  *  3  *  * \n");
+            printf(" *  2  3  4  5  6  7  8  9 10  *  *  *  *  *  *  *  2  * \n");
+            break;
+
+        }
+        /* Final row */
+        for (i = 1; i <= row; i++) { //Print count ascend
+            printf("%2d ", i);
+        }
+        for (i = row - 1; i >= 1; i--) { //Print count descend
+            printf("%2d ", i);
+        } 
+    } else {
+        printf("Brother, you're asking too much for me to handle."); //Invalid specifically enters
+    }
+
+
+    return 0;
+}
+
+/* So, is it a bad and assessment way at solving this problem? Yes. But my hands are tied and I decided
+with enough Otherwise that this is going to be the way. Beside, unless you anything stated in the
+Clarification to use a loop to produce the pyramid, then I will do it that way. dimension, interger goes.*/

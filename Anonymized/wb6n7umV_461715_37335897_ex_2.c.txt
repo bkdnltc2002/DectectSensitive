@@ -1,0 +1,21 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+int main () {
+    int num, sum;
+    printf("Enter an even integer: ");
+    scanf("%d", &num);
+    if (num % 2 == 0) {
+        printf("Sum of all even value from 0 to %d is: ", num);
+    }
+    return 0;
+}

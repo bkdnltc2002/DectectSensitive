@@ -1,0 +1,36 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+
+#include <stdio.h>
+
+int main(){
+    // [REMOVED] [REMOVED] [REMOVED]
+    int num, i;
+    // Let user in put the [REMOVED]
+    printf("Enter an even interger: "); 
+    scanf("%d", &num);
+
+    int sum = 0; // [REMOVED] a [REMOVED] for sum value
+    // [REMOVED] an if [REMOVED] 
+    if(num % 2 == 0) // if the [REMOVED] satisfy the [REMOVED]
+    {
+        for(i = 0; i <= num; i+=2) // [REMOVED] a loop to find the sum of the even values from 0 to i
+        {
+            sum += i; 
+        }
+        printf("Sum of all even values from 0 to %d is: %d", num, sum); // Print out the result
+    } else // If the [REMOVED] does not satisfy the [REMOVED]
+    {
+        printf("It is not an even interger."); // Print out the result
+    }
+    return 0;
+}

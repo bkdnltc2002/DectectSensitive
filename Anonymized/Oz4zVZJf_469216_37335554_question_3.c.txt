@@ -1,0 +1,58 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+int main (){
+    int input;
+    
+     //take the user's input
+    do {
+        printf("Enter a number (1-10): ");
+        scanf("%d", &input);
+    } while (input < 1 || input > 10); //repeat until user enter number [1-10]
+
+
+    //print the first half of the [REMOVED]
+    for (int i = 1; i <= input; i++){
+        //print block of spaces
+        for (int j = 1; j <= input - i; j++){
+            printf("  ");
+        }
+
+    //print the numbers
+    int num = input - i + 1;
+    for (int k = 1; k <= i; k++){
+        printf(" %d", num);
+        num ++;
+    }
+
+    //[REMOVED] the other half of the [REMOVED]
+    //print the spaces
+    if (i != input){ //exclude the first line
+    for (int a = 3; a < i + 1; a++){
+        printf("  ");
+        }
+    } 
+
+    //print the numbers
+    if (num - i != input && num - i != 1){
+    printf(" %d ", num - i);
+    } else if (i == input){ //print the last line 
+        for (int b = input -1; b > 0; b-- ){
+            printf(" %d", b);
+        }
+    }
+    //go to the next line
+    printf("\n");
+    
+    }
+    return 0;
+}

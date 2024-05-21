@@ -1,0 +1,23 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+int main(){
+    for (int row= sp; row = num || row < num; sp++)
+
+
+
+
+
+
+    return 0;
+    
+}

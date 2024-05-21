@@ -1,0 +1,44 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]t
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+#include <stdio.h>
+
+int main(){
+    //declare the [REMOVED]
+    float number1;
+    float number2;
+    float number3;
+    
+    int ok; //check the [REMOVED]
+
+    // get input from user
+    printf("Enter three float numbers: \n");
+    scanf("%f %f %f", &number1, &number2, &number3);
+
+    //do the [REMOVED]
+    if(number1 == (number2 + number3) || number2 == (number1 + number3) || number3 ==  (number1 + number2)){
+        ok = 1;
+    }
+    else {
+        ok = 0;
+    }
+
+    //print out for user
+    printf("A number is the sum of the others: ");
+    if(ok== 1){
+        printf("YES\n");
+    }
+    else{
+        printf("NO\n");
+    }
+    return 0;
+
+}

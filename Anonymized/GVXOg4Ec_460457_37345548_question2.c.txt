@@ -1,0 +1,34 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    [REMOVED]: [REMOVED]
+*/
+#include <stdio.h>
+int main (void) {
+    char alphabet = 65;
+    char ch;
+    do{
+    printf("Enter an alphabet character: ");
+    scanf("%c ", &alphabet);
+    alphabet = 65 + 1;
+    } while (alphabet = alphabet);
+    printf ("All alphabet characters up to %c is: ", alphabet);
+
+    
+
+     
+return 0;
+
+    }
+
+  
+  
+
+
+

@@ -1,132 +1,77 @@
-import re
-import json
 import os
-from glob import glob
-from transformers import BertTokenizer, BertForMaskedLM
-import torch
-import logging
+import re
+import spacy
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Load the spaCy model for Named Entity Recognition (NER)
+nlp = spacy.load("en_core_web_sm")
 
-# Initialize the BERT model and tokenizer once
-tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-model = BertForMaskedLM.from_pretrained("bert-base-uncased")
+# Define the directories
+input_directory = 'SampleData'
+anonymized_directory = 'Anonymized'
+sensitive_info_directory = 'Sensitive_Info'
 
-# Define a function to detect sensitive information using the BERT model
-def detect_sensitive_info(comment):
-    sensitive_info = {}
-    
-    # Define potential sensitive keywords to look for
-    keywords = ["course", "semester", "lab assessment", "author", "id", "name", "compiler", "references"]
-    
-    for keyword in keywords:
-        if keyword in comment.lower():
-            # Extract the relevant part of the comment for the keyword, excluding the keyword itself
-            keyword_info = re.search(rf'\b{keyword}\b\s*:\s*(.*?)(\.|;|,|\n)', comment, re.IGNORECASE)
-            if keyword_info:
-                info = keyword_info.group(1).strip()
-                sensitive_info[keyword] = info
-    
-    # Truncate the comment to the maximum length allowed by the model
-    max_length = tokenizer.model_max_length
-    truncated_comment = comment[:max_length]
-    
-    # Use the model to detect other potential sensitive information
-    masked_comment = truncated_comment.replace(" ", " [MASK] ")
-    inputs = tokenizer(masked_comment, return_tensors="pt", truncation=True, max_length=max_length, padding='max_length')
-    with torch.no_grad():
-        outputs = model(**inputs)
-    predictions = outputs.logits
-    
-    # Get the predicted tokens
-    predicted_tokens = torch.argmax(predictions, dim=-1)
-    predicted_tokens = tokenizer.convert_ids_to_tokens(predicted_tokens[0])
-    
-    for token in predicted_tokens:
-        if token.lower() in keywords:
-            # Extract the relevant part of the comment for the token, excluding the token itself
-            token_info = re.search(rf'\b{token}\b\s*:\s*(.*?)(\.|;|,|\n)', comment, re.IGNORECASE)
-            if token_info:
-                info = token_info.group(1).strip()
-                sensitive_info[token.lower()] = info
-    
-    return sensitive_info
+# Ensure output directories exist
+os.makedirs(anonymized_directory, exist_ok=True)
+os.makedirs(sensitive_info_directory, exist_ok=True)
 
-# Function to read the text file and extract comments
-def extract_comments(file_path):
-    comments = []
-    content = ""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+# Define regular expressions for different types of comments in various languages
+single_line_comment_pattern = re.compile(r'//.*?$|#.*?$|--.*?$', re.MULTILINE)
+multi_line_comment_pattern = re.compile(r'/\*.*?\*/|<!--.*?-->|\'\'\'.*?\'\'\'|""".*?"""', re.DOTALL)
+
+# Function to extract comments
+def extract_comments(text):
+    comments = multi_line_comment_pattern.findall(text) + single_line_comment_pattern.findall(text)
+    return comments
+
+# Function to detect and replace sensitive information using regex and NLP
+def detect_and_replace_sensitive_info(text):
+    sensitive_info = []
+    
+    # Regex pattern for email addresses and long alphanumeric strings (e.g., student IDs)
+    generic_pattern = re.compile(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b|\b[A-Za-z0-9]{8,}\b')
+    
+    doc = nlp(text)
+    matches = generic_pattern.findall(text) + [ent.text for ent in doc.ents if ent.label_ in ["PERSON", "ORG", "GPE", "LOC"]]
+
+    # Sort matches by their position in the text to maintain order
+    matches = sorted(set(matches), key=lambda x: text.find(x))
+
+    for match in matches:
+        if not any(match in info for info in sensitive_info):
+            sensitive_info.append(match)
+            text = text.replace(match, '[REMOVED]', 1)
+
+    return text, sensitive_info
+
+# Process each file in the directory
+for filename in os.listdir(input_directory):
+    if filename.endswith(('.py', '.java', '.cpp', '.c', '.js', '.html', '.css', '.php', '.rb', '.go', '.rs')):  # Process only code files
+        filepath = os.path.join(input_directory, filename)
+        with open(filepath, 'r') as file:
             content = file.read()
-            # Extract comments enclosed within /* and */
-            comments = re.findall(r'/\*(.*?)\*/', content, re.DOTALL)
-    except FileNotFoundError:
-        logging.error(f"The file {file_path} does not exist.")
-    except Exception as e:
-        logging.error(f"An error occurred while reading {file_path}: {e}")
-    return comments, content
 
-# Function to remove sensitive information from comments
-def remove_sensitive_info(content, comments):
-    cleaned_content = content
-    sensitive_data = []
-    
-    for comment in comments:
-        detected_info = detect_sensitive_info(comment)
-        if detected_info:
-            sensitive_data.append(detected_info)
-            # Remove sensitive info from comment
-            cleaned_comment = '/* [SENSITIVE INFORMATION REMOVED] */'
-            cleaned_content = cleaned_content.replace(comment, cleaned_comment)
-    
-    return cleaned_content, sensitive_data
+        # Extract comments
+        comments = extract_comments(content)
+        
+        # Detect and replace sensitive information within comments
+        sensitive_info = []
+        anonymized_comments = []
+        for comment in comments:
+            original_comment = comment
+            anonymized_comment, detected_info = detect_and_replace_sensitive_info(comment)
+            sensitive_info.extend(detected_info)
+            anonymized_comments.append((original_comment, anonymized_comment))
+            content = content.replace(original_comment, anonymized_comment)
 
-# Function to write sensitive information to a JSON file
-def save_sensitive_info(file_path, sensitive_data, output_folder):
-    base_name = os.path.basename(file_path)
-    json_file_path = os.path.join(output_folder, f'{base_name}.sensitive.json')
-    with open(json_file_path, 'w', encoding='utf-8') as json_file:
-        json.dump(sensitive_data, json_file, indent=4)
-    logging.info(f"Sensitive information saved to {json_file_path}")
+        # Save the anonymized content as a text file
+        anonymized_filepath = os.path.join(anonymized_directory, f"{filename}.txt")
+        with open(anonymized_filepath, 'w') as file:
+            file.write(content)
 
-# Main function to secure sensitive information
-def secure_sensitive_info(file_path, anonymized_output_folder, sensitive_info_output_folder):
-    comments, content = extract_comments(file_path)
-    if not content:
-        logging.warning(f"Skipping {file_path} as it could not be read or is empty.")
-        return  # Skip processing if the file could not be read
-    
-    cleaned_content, sensitive_data = remove_sensitive_info(content, comments)
-    
-    # Save the cleaned content to a new file with the format anonymized_<original_filename>.txt
-    base_name = os.path.basename(file_path)
-    anonymized_file_path = os.path.join(anonymized_output_folder, f'anonymized_{base_name}')
-    with open(anonymized_file_path, 'w', encoding='utf-8') as file:
-        file.write(cleaned_content)
-    
-    save_sensitive_info(file_path, sensitive_data, sensitive_info_output_folder)
-    logging.info(f"Cleaned file saved as {anonymized_file_path}")
+        # Save the sensitive information in order, avoiding duplicates
+        sensitive_info_filepath = os.path.join(sensitive_info_directory, f"{filename}_sensitive_info.txt")
+        with open(sensitive_info_filepath, 'w') as file:
+            for info in sorted(set(sensitive_info), key=sensitive_info.index):
+                file.write(f"{info}\n")
 
-# Function to process multiple files in a folder sequentially
-def process_files_in_folder(input_folder, anonymized_output_folder, sensitive_info_output_folder):
-    if not os.path.exists(anonymized_output_folder):
-        os.makedirs(anonymized_output_folder)
-    if not os.path.exists(sensitive_info_output_folder):
-        os.makedirs(sensitive_info_output_folder)
-
-    file_paths = glob(os.path.join(input_folder, '*'))
-    
-    for file_path in file_paths:
-        try:
-            secure_sensitive_info(file_path, anonymized_output_folder, sensitive_info_output_folder)
-        except Exception as e:
-            logging.error(f"An error occurred during file processing: {e}")
-
-# Example usage
-input_folder_path = 'TextData'  #  input folder
-anonymized_output_folder_path = 'Anonymized'  #  anonymized output folder
-sensitive_info_output_folder_path = 'Sensitive_Info'  #  sensitive info output folder
-
-process_files_in_folder(input_folder_path, anonymized_output_folder_path, sensitive_info_output_folder_path)
+        print(f'Processed file: {filename}')

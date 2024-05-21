@@ -1,0 +1,30 @@
+/*
+    
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]/
+
+
+
+#include <stdio.h>
+int main(){
+    int num;
+    printf("Enter an integer between 1 and 10: ");
+    scanf("%d",&num);
+    for(int row =1;row <=num;row++){
+        for( int block =1;block <=num-row;block++){
+            printf("    ");
+        }
+        for (int val = num- row+1;val<=num;val++){
+            printf(" %2d ",val);
+        }
+        
+        printf("\n");
+    }
+
+    return 0;
+}

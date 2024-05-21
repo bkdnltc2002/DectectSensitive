@@ -1,0 +1,36 @@
+/*
+   
+    Course: [REMOVED]
+    [REMOVED]: [REMOVED]
+    Lab [REMOVED]: [REMOVED]
+    Author: [REMOVED]
+    ID: [REMOVED]
+    [REMOVED] used: [REMOVED]
+    Created  date: [REMOVED]
+    References: [REMOVED]
+*/
+    
+
+#include <stdio.h>
+#include <math.h>
+
+    // input the float values
+    float main() {
+        float value1, value2, value3
+        printf ("enter 3 float numbers to determine if one is equal to the sum of the other two:");
+        scanf ("%d %d %d", &value1, &value2, &value3);
+
+    // finding if one value is the sum of the other two
+        if (value1 = value2 + value3 && value2 = value1 + value3 && value3 = value1 + value2){
+        printf ("A value is equal to the sum of others: YES") // 1 of the sum is equal
+        
+        }if (value1 < value2 + value3 && value2 < value1 + value3 && value3 < value1 + value2){
+        printf ("A value is equal to the sum of others: NO") // 1 of the sum is larger than the other float
+        
+        }if (value1 > value2 + value3 && value2 > value1 + value3 && value3 > value1 + value2){
+        printf ("A value is equal to the sum of others: NO") // 1 of the sum is smaller than the other float
+        }
+
+        return 0;
+    }
+    
