@@ -5,8 +5,7 @@
     Lab [REMOVED]: [REMOVED]
     Author: [REMOVED]
     ID: [REMOVED]
-    [REMOVED] used: [REMOVED]
-    Created  date: [REMOVED]
+    [REMOVED] used: [REMOVED]  date: [REMOVED]
     References: [REMOVED]
 */
 #include<stdio.h>

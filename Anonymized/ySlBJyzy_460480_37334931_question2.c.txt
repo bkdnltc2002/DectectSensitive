@@ -3,7 +3,7 @@
     Course: [REMOVED]
     [REMOVED]: [REMOVED]
     Lab [REMOVED]: [REMOVED]
-    Author: [REMOVED]t
+    Author: [REMOVED]
     ID: [REMOVED]
     [REMOVED] used: [REMOVED]
     Created  date: [REMOVED]
