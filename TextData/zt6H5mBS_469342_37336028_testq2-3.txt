@@ -1,0 +1,35 @@
+/*
+    
+    Course: yGxhAScpBbla
+    Semester: dXdRzaEFEXH1
+    Lab Assessment: yUcn4p1p7e9n
+    Author: Q7UIAp2XrABB
+    ID: W8kdRVgMJ392
+    Compiler used: J1EzQMFiIkL2
+    Created  date: EwHuCz0ykI5S
+    References: shXjlAQ6oOtS
+*/ 
+#include <stdio.h> 
+
+int main ()
+{
+    int num, sum = 0;
+    do 
+    {
+        printf ("enter an even interger: "); 
+        scanf ("%d", &num); 
+        if (num %2 != 0) 
+        { 
+            printf("it is not an even interger! \n");
+        }
+    } while (num % 2 != 0); 
+    if (num % 2 == 0) 
+    {
+    for (int i = 0 ; i <= num; i= i + 2 ) 
+    {
+      sum += i; 
+    } 
+    printf ("sum of all even values from 0 to %d : %d", num, sum);
+     }
+return 0;     
+}
