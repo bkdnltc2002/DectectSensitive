@@ -27,7 +27,7 @@ def detect_sensitive_info(text):
     tagger.predict(sentence)
     
     # Extract entities
-    entities = [entity.text for entity in sentence.get_spans('ner') if entity.tag in ["PER", "ORG", "LOC", "MISC"]]
+    entities = [entity.text for entity in sentence.get_spans('ner') if entity.tag in ["PER", "ORG", "LOC"]]
     
     # Combine regex matches and Flair NER entities
     matches = generic_pattern.findall(text) + entities

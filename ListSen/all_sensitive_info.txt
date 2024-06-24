@@ -1,0 +1,421 @@
+Nguyen Xuan Thanh
+s3915468
+RMIT University
+Programming
+num2
+printf("Enter three
+&num1
+&num2, &num3
+printf("A
+conditions
+appropriate
+num2 +
+num1
+yGxhAScpBbla
+Semester
+dXdRzaEFEXH1
+Assessment
+yUcn4p1p7e9n
+BAfm1bRmPCpj
+VX2MfBIX4D7y
+Compiler
+20zmVn0LRwmo
+JdtgbsuWhNNg
+References
+g6uSn07TTrtx
+num
+printf("It
+whitespace
+ascending
+left_col
+descending
+duplicate
+zpm3FRjT6pUU
+Mc8QauiRtrJx
+rM79xorQ5WyH
+EwHuCz0ykI5S
+shXjlAQ6oOtS
+printf("enter 3
+&num2 ,&num3
+if(num1
+together
+printf("enter
+OtcKISZWUZ8A
+KC8vOO4jhc8h
+zN5XyhidVF9f
+numinhalf
+numinhalf < num && numinhalf
+dBXh45lLFunr
+
+FYPUkKYkIqmc
+Initialize
+vairable
+printf("Enter 3
+variable
+interger
+different
+printf("Enter a number(1-10
+num-col
+num - col +1
+a8UIOO0tdhmB
+aDlaj4GalMzb
+Calculate
+calculation
+zdYuarofgEuJ
+sDA0tdbOWndW
+9nMM81R3yyyo
+Question
+calculate
+Explanation
+Declaration
+Condition
+automatically
+for(int i=0
+sum+=i
+printing
+calculating
+inclusively
+for(int blank=1
+for(int b=9;b>=0;b--
+if(i==10
+hKxBAZryQ1Dh
+5UDmUFrR2PQa
+Generate
+variables
+statement
+num1 + num2
+if(num
+condition
+j++
+n--
+OD5Fbxa7YNvt
+VtPldBs4cEjO
+J1EzQMFiIkL2
+cFP9XKDbUANg
+char char1
+char char2
+num1 + num2 +
+char2
+nums
+countNum
+int sumEven
+\n ", sumEven
+nums; j--){
+int val
+val
+3zwDDhkBgfdW
+v862gvPoUbMp
+Consition
+continue
+printf("Enter annumber
+1 &&
+blank*/
+ykySNwuJRqLy
+u9PmSNkupXA5
+aesmAYSayOix
+c==a+b
+Yes\n
+No\n
+b<=a
+sum+b
+for(row
+row>1
+MPyjjrBEJzrF
+ubml4gn3MQGe
+Mt96p4q1nHo0
+i<3; i++
+arr[i
+i+2
+printf("enter no
+for(int col
+col<=num
+block=1; block<=row-2
+else(row==num
+col--
+6kBLuOVyfX7B
+A8eAn992gbHB
+UmVgGOUBSIAd
+floatnum1
+floatnum2
+floatnum3
+scanf
+|| floatnum3 =
+evennum
+g3nLEbd6jxSo
+5CGpI4JFIrVG
+SB9wobYiYZoQ
+&num2 , &num3
+num2 + num3 && n
+0;i<= num
+j94IiAFudlFY
+NYBvZs2edP8t
+tk4qEaIA06Uw
+QJiAfdP2xfzB
+num2 &&
+num2 > 1 && num2
+cnt
+XUjdTgzond53
+1pU3RxBcLYKb
+w7O8s9hMmUof
+positive
+L2wFvbGzSI3F
+m8YQSAdGSZGo
+xlkVLeOovPQM
+l0SO4RYgrMN5
+ac
+creating
+oXY0olyuH1fy
+dyWhDeFXG6U8
+1PBEEfR7yj2G
+K4H2fTNK8CK8
+2ys1WLLUGdUv
+count1=0
+k++
+j3zHUDvq6FNc
+tS4r7mThGwnV
+jnj84mv799Vq
+eBRyLRdgmUT9
+min1
+int dur
+beginning
+duration
+min1= min +dur
+hour1 = hour +
+hour1
+alphabet
+character
+characters
+s41ea0l2nSc2
+D9tQHI4mq5c8
+combinations
+Printspaces
+triangle
+num && i
+breaking
+g
+umczgJLmqU2Y
+Dzos1zm2SUhl
+numb1
+numb2
+numb3
+scanf("%lf
+G991R3uUQ7wM
+HF9So4gsRl8j
+0QLY56SjMCuj
+JnHk90a2TPTj
+i<= num
+2tbd7RhagUEv
+4uElJX9igOaG
+MaLAPBsQcKTR
+\n
+8wwtSUrYbIav
+8ECuls0gEjRG
+FefqL0zcUFx1
+Integer
+vertical
+horizontal
+HNtmrTm8yeLN
+ID: osNWVh3Y4uLW
+//Ask
+while(num<1 || num>10)
+10\n
+ascending_num
+printf("%i"
+pnZ73lUZiJYw
+ow1cxYcFoUhK
+EE8lMnzao8Ou
+QiDqjB2f8IGq
+value1
+value2
+determine
+RoB9KW87J7VT
+
+chec
+dividing
+evem
+EtJT2gjBiH83
+Printing
+digit++
+continuing
+nkNIAs4WupWN
+7LvbEKQaneV4
+2>0 &&
+num%2==0 && num>=0
+sp++
+UGzq9TE1hCV8
+UGzq9TE1hCV8
+
+QXkhm4TqTPlp
+if(float1 + float2
+K5T2DUrHOc7q
+le8UTSx6YHOn
+oG6mj2M38YUJ
+num2+num3 ||
+YES\n");//
+qET0euGgeEuW
+myJyDRWAxZID
+ZL3ae3Kb5lov
+|| num2 =
+sum_even
+scanf("%d
+sum_even +=
+F7iiL7xhbKrk
+9ovFGMqr1pZm
+&num2
+if((num1 =
+determining
+negative
+XppaaNAbm2mN
+t1dJ45HltSoN
+sDHnoTCtRwt0
+ueRUqLOokKgA
+printf("enter an
+block= num
+ymiwe2h3k9qk
+6bxm11jkG9zS
+announcement
+checking
+grPz2qnGrl5z
+TEdjUV1QIa12
+DEsaEdBEdlwR
+0MlbRxLrGACx
+9F2ndpvbjvzm
+Acknowledgement
+numerical
+NO\n
+Checking
+Claculation
+permuatation
+Clarification
+dimension
+inefficient
+permutation
+specifically
+assessment
+Otherwise
+anything
+4ZpMFPcvTKtW
+mjTRhHgLJMXD
+num2 || num2 +
+user_input
+resetting
+divisible
+LHS
+xIpP2gJGQWAs
+f79QVvgXFWHk
+|| num1 - num2
+num1 || num3 - num2
+b--
+921qIoR84Ukb
+1sAfoxN6Y83W
+floating
+Calculating
+integers
+char space1
+char space2
+space1
+following
+i && num -
+printf("%-1s"
+space2
+Bj4u1jGjGGXT
+SISVrcC9ItIg
+qsQdnytvm5L6
+HjG3yqpHdhaS
+row*2)-2
+N8uTAYewYqra
+NOYqBw224zvT
+int i=0
+printf("Invalid value
+icoZOaesdVGz
+jyQoIGy1yCLu
+3Tgx5jqU34Tj
+nVXFhwU2bg1M
+FyoqfBtGYV8t
+XOrhO1YY8sJi
+zo5hI9I9OOIT
+inclusive
+including
+decending
+l--
+JIDZpDNFgQMF
+fJkCn4QmxEGp
+terminate
+determines
+orientation
+corresponding
+satisfied
+ZaQtsmu7ACV7
+0mRJO2tiaMwC
+scd
+&scd
+&trd
+= scd
+int col
+count++
+Tp3qvsWLfZiw
+01t615c0zrj5
+hzeU18uh7RrX
+12J4K2wdHK3C
+k756qXfkk6wT
+Y9QllqKjRUVh
+GhlDiNOoJ1YJ
+z3KjQTITFPeE
+column++
+ucWEROuf8TbS
+CrjNkX3JbREC
+scanf("%f",&num3
+intergers
+pp4Zlg3cz2AF
+YfeNuBh3sn1Z
+pRVocT3BKPcu
+Calculates
+isSaHu2ed9IV
+O4qtjJsqs4yP
+QYG9l0IbOIJN
+AvLvKP2JEC5C
+W5yyWt48i6P7
+algorithm
+fulfilled
+printf("\nIt
+required
+plXf9MAg7F19
+942hx8eeqnYZ
+num && row
+9j7alYd1Nigo
+IG63aRB31kgc
+iteration
+increasing
+sequence
+decreasing
+wa4z37WXd2No
+7tYqYIyR1fuK
+scanf("%f%f%f", &a, &b, &c
+equalSum
+something
+displays
+spaces--
+calcualte
+afterSpaces
+calculated
+decremented
+decrement
+dfz6XyZ18AtO
+AfXUxnRPt3A9
+2yohDZwENKA4
+WThhjD0kpFWD
+crZwU3Pu3P52
+num - col - 1
+rU22exttQj9t
+JOxYYplKG2Eu
+TC9AjmIanReT
+number1
+&number1
+&number2, &number3
+evennumber
+&evennumber
+//do
+calcualtion
+Q7UIAp2XrABB
+W8kdRVgMJ392
+blockofspace
